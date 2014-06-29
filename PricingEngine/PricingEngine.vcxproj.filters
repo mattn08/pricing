@@ -21,12 +21,18 @@
     <ClInclude Include="StatsUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Black_scholes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VanillaOption.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StatsUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Black_scholes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

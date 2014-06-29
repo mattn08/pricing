@@ -62,10 +62,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Black_scholes.h" />
     <ClInclude Include="StatsUtil.h" />
     <ClInclude Include="VanillaOption.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Black_scholes.cpp" />
     <ClCompile Include="StatsUtil.cpp" />
     <ClCompile Include="VanillaOption.cpp" />
   </ItemGroup>
