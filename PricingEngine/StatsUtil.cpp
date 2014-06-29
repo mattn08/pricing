@@ -1,4 +1,4 @@
-
+﻿
 #define USE_MATH_DEFINES
 
 /* Constants rounded for 21 decimals. */
@@ -20,7 +20,6 @@
 #include <iostream>
 #include <cmath>
 #include "StatsUtil.h"
-
 
 
 // Standard normal probability density function
@@ -68,7 +67,7 @@ double put_price(const double& S, const double& K, const double& r,
 			   norm_cdf(-d_j(2, S, K, r, v, T));
 }
 
-int main (int argc, char argv) {
+int unused_main (int argc, char argv) {
 	// First we create the parameter list
 	double S = 100.0; // Option price
 	double K = 95.0; // Strike price
@@ -90,4 +89,31 @@ int main (int argc, char argv) {
 	std::cout << "Put Price:      " << put << std::endl;
 	return 0;
 }
+
+// ===========
+// MONTE CARLO
+// ===========
+// A simple implementation of the Box-Muller algorithm, used to generate
+// gaussian random numbers necessary for the Monte Carlo method below
+// Note that C++11 actually provides std::normaldistribution<> in
+// the <random> library, which can be used instead of this function
+double gaussianboxmuller() {
+	double x = 0.0;
+	double y = 0.0;
+	double euclid_sq = 0.0;
+
+	// Cont inue g ene r a t ing two uni form random v a r i a b l e s
+	// u n t i l the square of t h e i r " e u c l i d e an d i s t anc e "
+	// i s l e s s than uni t y
+
+	do {
+		x = 2.0 * rand() / static_cast<double>(RAND_MAX)-1;
+		y = 2.0 * rand() / static_cast<double>(RAND_MAX)-1;
+		euclid_sq = x*x + y*y;
+	} while (euclid_sq >= 1.0);
+
+	return x * sqrt(-2 * log(euclid_sq) / euclid_sq);
+}
+
+
 
