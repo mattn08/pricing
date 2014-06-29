@@ -63,13 +63,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Black_scholes.h" />
+    <ClInclude Include="FDM.h" />
     <ClInclude Include="main2.h" />
+    <ClInclude Include="MonteCarlo.h" />
     <ClInclude Include="StatsUtil.h" />
     <ClInclude Include="VanillaOption.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Black_scholes.cpp" />
+    <ClCompile Include="FDM.cpp" />
     <ClCompile Include="main2.cpp" />
+    <ClCompile Include="MonteCarlo.cpp" />
     <ClCompile Include="StatsUtil.cpp" />
     <ClCompile Include="VanillaOption.cpp" />
   </ItemGroup>

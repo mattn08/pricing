@@ -27,6 +27,12 @@
     <ClInclude Include="main2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FDM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MonteCarlo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VanillaOption.cpp">
@@ -39,6 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FDM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MonteCarlo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
