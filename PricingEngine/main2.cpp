@@ -1,6 +1,7 @@
 ﻿
 #include <iostream>
 #include "Black_scholes.h"
+#include "VanillaOption.h"
 #include "main2.h"
 
 int main(int argc, char **argv) {
@@ -43,6 +44,11 @@ int main(int argc, char **argv) {
 	std::cout << "Put Vega: " << put_vega_v << std::endl;
 	std::cout << "Put Theta: " << put_theta_v << std::endl;
 	std::cout << "Put Rho: " << put_rho_v << std::endl;
+
+	VanillaOption* option = new VanillaOption(K, r, T, S, v);
+	std::cout << option->calccallprice() << std::endl;
+	std::cout << option->calcputprice() << std::endl;
+
 	return 0;
 }
 

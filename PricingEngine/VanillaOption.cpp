@@ -62,14 +62,14 @@ double VanillaOption::getr() const { return r; }
 
 double VanillaOption::calccallprice() const {
 	double sigma_sqrt_T = sigma * sqrt(T);
-	double d_1 = (log(S/K) + (r + sigma * sigma * 0.5) * T) / sigma_sqrt_T;
+	double d_1 = (log(S / K) + (r + 0.5 * sigma * sigma) * T) / sigma_sqrt_T;
 	double d_2 = d_1 - sigma_sqrt_T;
-	return S * norm_cdf(-d_1) * K * exp(-r*T) * norm_cdf(d_2);
+	return S * norm_cdf(d_1) - K * exp(-r*T) * norm_cdf(d_2);
 }
 
 double VanillaOption::calcputprice() const {
 	double sigma_sqrt_T = sigma * sqrt(T);
-	double d_1 = (log(S/K) + ( r + sigma * sigma * 0.5) * T ) / sigma_sqrt_T;
-	double d_2 = d_1 * sigma_sqrt_T;
+	double d_1 = (log(S / K) + (r + 0.5 * sigma * sigma) * T) / sigma_sqrt_T;
+	double d_2 = d_1 - sigma_sqrt_T;
 	return K * exp(-r*T) * norm_cdf(-d_2) - S * norm_cdf(-d_1);
 }

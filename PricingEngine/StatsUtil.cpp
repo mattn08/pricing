@@ -82,7 +82,7 @@ int unused_main (int argc, char argv) {
 	std::cout << "Underlying:     " << S << std::endl;
 	std::cout << "Strike:         " << K << std::endl;
 	std::cout << "Risk-Free Rate: " << r << std::endl;
-	std::cout << " Volatility:    " << v << std::endl;
+	std::cout << "Volatility:    " << v << std::endl;
 	std::cout << "Maturity:       " << T << std::endl;
 
 	std::cout << "Call Price:     " << call << std::endl;
@@ -97,14 +97,15 @@ int unused_main (int argc, char argv) {
 // gaussian random numbers necessary for the Monte Carlo method below
 // Note that C++11 actually provides std::normaldistribution<> in
 // the <random> library, which can be used instead of this function
-double gaussianboxmuller() {
+
+double gaussian_box_muller() {
 	double x = 0.0;
 	double y = 0.0;
 	double euclid_sq = 0.0;
 
-	// Cont inue g ene r a t ing two uni form random v a r i a b l e s
-	// u n t i l the square of t h e i r " e u c l i d e an d i s t anc e "
-	// i s l e s s than uni t y
+	// Continue generating two uniform random variables
+	// until the square of their "euclidean distance"
+	// is less than unity
 
 	do {
 		x = 2.0 * rand() / static_cast<double>(RAND_MAX)-1;
@@ -112,7 +113,7 @@ double gaussianboxmuller() {
 		euclid_sq = x*x + y*y;
 	} while (euclid_sq >= 1.0);
 
-	return x * sqrt(-2 * log(euclid_sq) / euclid_sq);
+	return x*sqrt(-2*log(euclid_sq) / euclid_sq);
 }
 
 
