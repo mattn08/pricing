@@ -64,7 +64,6 @@
   <ItemGroup>
     <ClInclude Include="Black_scholes.h" />
     <ClInclude Include="FDM.h" />
-    <ClInclude Include="main2.h" />
     <ClInclude Include="MonteCarlo.h" />
     <ClInclude Include="StatsUtil.h" />
     <ClInclude Include="VanillaOption.h" />
