@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Black_scholes.h"
 #include "VanillaOption.h"
-#include "main2.h"
 
 int main(int argc, char **argv) {
 
@@ -50,13 +49,4 @@ int main(int argc, char **argv) {
 	std::cout << option->calcputprice() << std::endl;
 
 	return 0;
-}
-
-
-main2::main2()
-{
-}
-
-main2::~main2()
-{
 }
