@@ -1,3 +1,4 @@
+#pragma once
 
 double call_price(const double S, const double K, const double r, const double v, const double T);
 double call_delta(const double S, const double K, const double r, const	double v, const double T);
