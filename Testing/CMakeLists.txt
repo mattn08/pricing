@@ -1,6 +1,6 @@
 
 
-  set(BINARY ${CMAKE_PROJECT_NAME}_tst)
+  set(BINARY TestOptionPrice)
   file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
 
   set(SOURCES ${TEST_SOURCES})
@@ -10,6 +10,6 @@
 
   message(STATUS "Project Name: ${CMAKE_PROJECT_NAME}")
 
-  target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest gtest_main)
+  target_link_libraries(${BINARY} PRIVATE ${CMAKE_PROJECT_NAME}_lib gtest gtest_main)
 
 
