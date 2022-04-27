@@ -10,6 +10,6 @@
 
   message(STATUS "Project Name: ${CMAKE_PROJECT_NAME}")
 
-  target_link_libraries(${BINARY} PRIVATE ${CMAKE_PROJECT_NAME}_lib gmock gtest pthread)
+  target_link_libraries(${BINARY} PRIVATE ${CMAKE_PROJECT_NAME}_lib gtest pthread)
 
 
