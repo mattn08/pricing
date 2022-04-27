@@ -23,7 +23,7 @@ add_library(PricingEngine_lib STATIC
     inc/StatsUtil.h
     inc/VanillaOption.h
 
-    # src/main.cpp
+    src/main.cpp
     src/Black_scholes.cpp
     src/StatsUtil.cpp
     src/VanillaOption.cpp

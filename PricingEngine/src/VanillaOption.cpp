@@ -1,13 +1,7 @@
 ﻿
-//#IFNDEF __VANILLA OPTION CPP
-//#DEFINE __VANILLA OPTION CPP
-
-//#ENDIF
-
 #include <cmath>
 #include "VanillaOption.h"
 #include "StatsUtil.h"
-
 
 
 void VanillaOption::init() {

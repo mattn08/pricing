@@ -1,8 +1,5 @@
 
-//#IFNDEF VANILLA OPTION H
-//#DEFINE VANILLA OPTION H
-
-//#ENDIF
+#pragma once
 
 class VanillaOption {
 
